@@ -91,7 +91,7 @@ export type UserType = InferSchemaType<typeof UserSchema>;
 
 
 
-export type userDocument = HydratedDocument<UserType>
+export type UserDocument = HydratedDocument<UserType>
 // hydratedDocument means a mongodb document that contains:
 // - your schema fields and plus mongoose methods
 // {
@@ -103,7 +103,7 @@ export type userDocument = HydratedDocument<UserType>
 // }
 
 
-type UserModel = Model<userDocument>; 
+type UserModel = Model<UserDocument>; 
 //UserModel is a Mongoose Model whose records are UserDocument type.”
 
 
