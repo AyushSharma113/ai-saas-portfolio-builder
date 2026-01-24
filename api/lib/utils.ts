@@ -47,3 +47,13 @@ export const handleApiError = (err: unknown) => {
     showToast.error(message || "An unknown error occurred");
   }
 };
+
+
+export const devLog = {
+  warn: (...args: unknown[]) => {
+    if (process.env.NODE_ENV === "development") console.warn(...args);
+  },
+  error: (...args: unknown[]) => {
+    if (process.env.NODE_ENV === "development") console.error(...args);
+  },
+};
