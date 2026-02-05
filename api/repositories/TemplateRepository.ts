@@ -115,3 +115,6 @@ export class TemplateRepositoryClass extends BaseRepository<TemplateDocument> {
 }
 
 
+
+// Export singleton instance
+export const templateRepository = new TemplateRepositoryClass();
