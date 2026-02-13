@@ -43,19 +43,7 @@ export interface Skill {
   proficiency: "beginner" | "intermediate" | "advanced" | "expert";
 }
 
-// Request/Response interfaces for API
-export interface CreatePortfolioRequest {
-  userId: string;
-  name: string;
-  templateId: string;
-  slug?: string;
-  profile: PortfolioProfile;
-  skills: Skill[];
-  certifications: Certification[] | [];
-  experiences: Experience[];
-  projects: Project[];
-  settings: PortfolioSettings;
-}
+
 
 export interface Certification {
   name: string;
@@ -78,6 +66,21 @@ export interface Experience {
   achievements: string[];
   technologies: string[];
 }
+
+// Request/Response interfaces for API
+export interface CreatePortfolioRequest {
+  userId: string;
+  name: string;
+  templateId: string;
+  slug?: string;
+  profile: PortfolioProfile;
+  skills: Skill[];
+  certifications: Certification[] | [];
+  experiences: Experience[];
+  projects: Project[];
+  settings: PortfolioSettings;
+}
+
 
 
 export interface PortfolioFilters {

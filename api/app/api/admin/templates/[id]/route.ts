@@ -25,7 +25,7 @@ export async function POST(req: NextRequest, { params }: Params) {
       return NextResponse.json(
         {
           success: false,
-          error: validated.error.errors[0].message,
+          error: validated.error.issues[0].message,
         },
         { status: 400 }
       );
